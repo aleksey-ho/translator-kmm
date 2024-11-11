@@ -1,0 +1,82 @@
+[versions]
+agp = "8.5.2"
+kotlin = "2.0.20"
+compose = "1.7.2"
+compose-material3 = "1.3.0"
+androidx-activityCompose = "1.9.2"
+coroutines = "1.9.0"
+kotlinx-coroutines-core = "1.6.1-native-mt" # ?
+androidx-lifecycle = "2.8.6"
+moko-resources = "0.24.3"
+moko-mvvm = "0.16.1"
+sqldelight = "1.5.5"
+russhwolfMultiplatformSettings = "0.9"
+koin = "3.5.6"
+kotlinx-serialization = "1.6.3"
+kotlinx-datetime = "0.4.0"
+mlkit-translate = "17.0.3"
+androidx-appcompat = "1.7.0"
+androidx-constraintlayout = "2.1.4"
+androidx-activity-ktx = "1.9.2"
+androidx-fragment-ktx = "1.8.3"
+androidx-viewpager2 = "1.1.0"
+android-material = "1.12.0"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "coroutines" }
+
+sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqldelight" }
+sqldelight-coroutines = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+
+moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resources" }
+moko-resources = { module = "dev.icerock.moko:resources", version.ref = "moko-resources" }
+moko-mvvm-core = { module = "dev.icerock.moko:mvvm-core", version.ref = "moko-mvvm"}
+moko-mvvm-flow = { module = "dev.icerock.moko:mvvm-flow", version.ref = "moko-mvvm"}
+moko-mvvm-viewbinding = { module = "dev.icerock.moko:mvvm-viewbinding", version.ref = "moko-mvvm" }
+
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "russhwolfMultiplatformSettings" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin"}
+
+sqldelight-native-driver = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelight-android-driver = { module = "com.squareup.sqldelight:android-driver", version.ref = "sqldelight" }
+mlkit-translate = { module = "com.google.mlkit:translate", version.ref = "mlkit-translate" }
+
+# android
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "androidx-activity-ktx" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "androidx-fragment-ktx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "androidx-viewpager2" }
+
+moko-resources-compose = { module = "dev.icerock.moko:resources-compose", version.ref = "moko-resources" }
+android-material = { module = "com.google.android.material:material", version.ref = "android-material" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin"}
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+sqldelight = { id = "com.squareup.sqldelight", version.ref = "sqldelight" }
+
+[bundles]

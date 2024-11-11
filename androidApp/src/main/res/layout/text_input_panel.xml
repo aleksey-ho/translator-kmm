@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/text_input_panel_border"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextToTranslate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:overScrollMode="always"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:scrollHorizontally="false"
+            tools:hint="Enter text" />
+
+        <ImageButton
+            android:id="@+id/buttonClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_close_black_24dp"
+            android:scaleType="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/buttonVoiceInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_mic_black_24dp"
+            android:scaleType="center" />
+
+        <ImageButton
+            android:id="@+id/buttonPlayback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_volume_up_black_24dp"
+            android:scaleType="center" />
+    </LinearLayout>
+
+</LinearLayout>

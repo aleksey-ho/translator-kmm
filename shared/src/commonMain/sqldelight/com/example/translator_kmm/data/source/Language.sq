@@ -1,0 +1,40 @@
+import kotlinx.datetime.Instant;
+import kotlin.Int;
+
+CREATE TABLE LanguageEntity(
+    code TEXT NOT NULL PRIMARY KEY,
+    sourceLastUseDate INTEGER AS Instant,
+    targetLastUseDate INTEGER AS Instant,
+    usageCounter INTEGER AS Int NOT NULL DEFAULT 0
+);
+
+getLanguages:
+SELECT * FROM LanguageEntity;
+
+getLanguage:
+SELECT * FROM LanguageEntity WHERE code =:code;
+
+getRecentlyUsedSourceLanguage:
+SELECT * FROM LanguageEntity ORDER BY sourceLastUseDate DESC LIMIT 1;
+
+getRecentlyUsedTargetLanguage:
+SELECT * FROM LanguageEntity ORDER BY targetLastUseDate DESC LIMIT 1;
+
+getRecentlyUsedSourceLanguages:
+SELECT * FROM LanguageEntity
+WHERE usageCounter > 0
+ORDER BY sourceLastUseDate DESC;
+
+getRecentlyUsedTargetLanguages:
+SELECT * FROM LanguageEntity
+WHERE usageCounter > 0
+ORDER BY targetLastUseDate DESC;
+
+insertLanguage:
+INSERT OR REPLACE INTO LanguageEntity(code, sourceLastUseDate, targetLastUseDate, usageCounter)
+VALUES(?,?,?,?);
+
+update:
+UPDATE LanguageEntity
+SET sourceLastUseDate = ?, targetLastUseDate = ?, usageCounter = ?
+WHERE code = :code;

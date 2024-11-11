@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_access_time_black_24dp.SVG",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

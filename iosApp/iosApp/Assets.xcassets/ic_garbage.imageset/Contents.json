@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_garbage.SVG",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,7 @@
+use_frameworks!
+platform :ios, '16.0'
+
+target 'iosApp' do
+  pod 'GoogleMLKit/Translate'#, '3.2.0'
+  
+end

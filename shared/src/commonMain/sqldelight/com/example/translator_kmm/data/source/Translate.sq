@@ -1,0 +1,42 @@
+import kotlinx.datetime.Instant;
+import kotlin.Boolean;
+
+CREATE TABLE TranslateEntity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    languageSourceCode TEXT NOT NULL,
+    languageTargetCode TEXT NOT NULL,
+    date INTEGER AS Instant NOT NULL,
+    textSource TEXT NOT NULL,
+    textTarget TEXT NOT NULL,
+    savedInHistory INTEGER AS Boolean NOT NULL DEFAULT 0,
+    savedInFavorites INTEGER AS Boolean NOT NULL DEFAULT 0,
+    FOREIGN KEY(languageSourceCode) REFERENCES LanguageEntity(code),
+    FOREIGN KEY(languageTargetCode) REFERENCES LanguageEntity(code)
+);
+
+getHistory:
+SELECT * FROM TranslateEntity WHERE savedInHistory = 1;
+
+getFavorites:
+SELECT * FROM TranslateEntity WHERE savedInFavorites = 1;
+
+getTranslate:
+SELECT * FROM TranslateEntity WHERE languageSourceCode = :languageSourceCode AND languageTargetCode = :languageTargetCode AND textSource = :textSource;
+
+insert:
+INSERT OR IGNORE INTO TranslateEntity(languageSourceCode, languageTargetCode, date, textSource, textTarget, savedInHistory, savedInFavorites)
+VALUES(?,?,?,?,?, ?,?);
+
+update:
+UPDATE TranslateEntity
+SET savedInHistory = ?, savedInFavorites = ?, date = ?, textTarget = ?
+WHERE id = :id;
+
+clearHistory:
+UPDATE TranslateEntity SET savedInHistory = 0;
+
+clearFavorites:
+UPDATE TranslateEntity SET savedInFavorites = 0;
+
+removeRedundantEntries:
+DELETE FROM TranslateEntity WHERE savedInHistory = 0 AND savedInFavorites = 0;

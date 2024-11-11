@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InputWidget" customModule="iosApp" customModuleProvider="target">
+            <connections>
+                <outlet property="borderView" destination="jT7-05-cL2" id="gJK-Po-cEO"/>
+                <outlet property="micButton" destination="OT8-kd-3VT" id="SCV-z6-6se"/>
+                <outlet property="soundButton" destination="yvN-4g-l37" id="FVF-9l-yBw"/>
+                <outlet property="textView" destination="ug0-ls-1ah" id="xYS-mZ-Q3y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="InputWidget" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jT7-05-cL2" userLabel="Border View">
+                    <rect key="frame" x="0.0" y="59" width="393" height="178"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-ls-1ah">
+                            <rect key="frame" x="12" y="4" width="342" height="139"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OT8-kd-3VT" userLabel="Mic Button">
+                            <rect key="frame" x="354" y="5" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="WvJ-8d-YeH"/>
+                                <constraint firstAttribute="width" constant="35" id="jH9-D6-a5K"/>
+                            </constraints>
+                            <color key="tintColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="0.84705883264541626" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_mic_black"/>
+                            <connections>
+                                <action selector="micButtonTapped:" destination="-1" eventType="touchUpInside" id="iz3-KV-wbK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvN-4g-l37" userLabel="Sound Button">
+                            <rect key="frame" x="354" y="40" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="FZo-FL-iVy"/>
+                                <constraint firstAttribute="width" constant="35" id="pqN-Lo-7Rv"/>
+                            </constraints>
+                            <color key="tintColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="0.84705883260000003" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_volume_up_black"/>
+                            <connections>
+                                <action selector="soundButtonTapped:" destination="-1" eventType="touchUpInside" id="JSf-B6-MHj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdI-4t-BgT" userLabel="Clear Button">
+                            <rect key="frame" x="8" y="143" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="CPG-SR-uDe"/>
+                                <constraint firstAttribute="height" constant="35" id="qwm-45-stJ"/>
+                            </constraints>
+                            <color key="tintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="0.84705883260000003" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_close_black"/>
+                            <connections>
+                                <action selector="clearButtonTapped:" destination="-1" eventType="touchUpInside" id="ude-5v-9zV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MdI-4t-BgT" secondAttribute="bottom" id="0GL-IA-Rj1"/>
+                        <constraint firstAttribute="trailing" secondItem="OT8-kd-3VT" secondAttribute="trailing" constant="4" id="0H2-9o-Gdm"/>
+                        <constraint firstAttribute="trailing" secondItem="yvN-4g-l37" secondAttribute="trailing" constant="4" id="Hk9-CB-Qah"/>
+                        <constraint firstItem="yvN-4g-l37" firstAttribute="top" secondItem="OT8-kd-3VT" secondAttribute="bottom" id="HkF-C2-bIM"/>
+                        <constraint firstAttribute="height" constant="178" id="NGU-VY-aK8"/>
+                        <constraint firstItem="ug0-ls-1ah" firstAttribute="top" secondItem="jT7-05-cL2" secondAttribute="top" constant="4" id="cgX-Gx-SxC"/>
+                        <constraint firstItem="OT8-kd-3VT" firstAttribute="top" secondItem="jT7-05-cL2" secondAttribute="top" constant="5" id="mzk-l5-f7A"/>
+                        <constraint firstItem="MdI-4t-BgT" firstAttribute="top" secondItem="ug0-ls-1ah" secondAttribute="bottom" id="o9F-jT-RaY"/>
+                        <constraint firstItem="MdI-4t-BgT" firstAttribute="leading" secondItem="jT7-05-cL2" secondAttribute="leading" constant="8" id="rqh-Ly-ViT"/>
+                        <constraint firstItem="ug0-ls-1ah" firstAttribute="leading" secondItem="jT7-05-cL2" secondAttribute="leading" constant="12" id="xf8-yl-xXD"/>
+                        <constraint firstItem="OT8-kd-3VT" firstAttribute="leading" secondItem="ug0-ls-1ah" secondAttribute="trailing" id="zgj-cL-zbx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jT7-05-cL2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="X7g-Zk-J9O"/>
+                <constraint firstItem="jT7-05-cL2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="XuH-W5-kFw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jT7-05-cL2" secondAttribute="trailing" id="Ybj-wm-nho"/>
+            </constraints>
+            <point key="canvasLocation" x="-34.351145038167935" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close_black" width="24" height="24"/>
+        <image name="ic_mic_black" width="24" height="24"/>
+        <image name="ic_volume_up_black" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
